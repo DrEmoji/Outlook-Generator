@@ -152,7 +152,7 @@ namespace OutlookGen
 
                 WebHeaderCollection headers = new WebHeaderCollection
                 {
-                    { "accept-language", "en-US,en;q=0.9" },
+                    { "accept-language", "en-GB,en-US;q=0.9,en;q=0.8" },
                     { "cache-control", "no-cache" },
                     { "canary", apiCanary },
                     { "hpgid", hgid },
@@ -191,7 +191,7 @@ namespace OutlookGen
                     { "SiteId", siteid },
                     { "IsRDM", int.Parse(rdm) },
                     { "WReply", null },
-                    { "ReturnUrl", "" },
+                    { "ReturnUrl", null },
                     { "SignupReturnUrl", "" },
                     { "uiflvr", int.Parse(uifvr) },
                     { "uaid", uaid },
@@ -244,8 +244,8 @@ namespace OutlookGen
                 {
                     Console.WriteLine("\nCaptcha Failed\n");
                     UsingCaptcha = true;
-                    captcha = Utils.GenCaptchaKey().Result;
-                    Console.WriteLine("Captcha: " + captcha);
+                    //captcha = Utils.GenCaptchaKey().Result;
+                    //Console.WriteLine("Captcha: " + captcha);
                 }
                 else
                 {
